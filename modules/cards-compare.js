@@ -3,13 +3,15 @@ let clickCounter = 0;
 let removedCards = 0;
 
 function sameCardRemove(div) {
+  setTimeout(() => {
     let guessedCard = div.querySelectorAll(".opened");
     guessedCard[0].src = "./img/empty.png";
     guessedCard[0].className = "deleteded";
     guessedCard[1].src = "./img/empty.png";
     guessedCard[1].className = "deleteded";
     openedCards.splice(0, 2);
-    return removedCards += 2;
+  }, 150);
+  return (removedCards += 2);
 }
 
 function differentCardClose(div) {
