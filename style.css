@@ -1,0 +1,163 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: calc(16px + 4* ((100vw - 320px) / (960 - 320)));
+  background-image: url(./img/crossword.png);
+}
+
+.wrapper {
+  max-width: 960px;
+  max-height: 100vh;
+  margin: 3% auto 3% auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.wrapper>p {
+  padding: 1em;
+}
+
+#select {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+  color: #444;
+  max-width: 80%;
+  border: 2px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#playbtn {
+  display: inline-block;
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background-color: #4676d7;
+  color: #f9f9f9;
+  padding: .5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#playbtn:hover {
+  background: #1d49aa;
+}
+
+#playbtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+#playbtn:disabled {
+  background: #9badd3;
+}
+
+#playwindow {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -10;
+  background-image: url(./img/concrete_seamless.png);
+  opacity: 0;
+}
+
+#cardwrapper {
+  max-width: 1160px;
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card>img {
+  max-width: 90%;
+}
+
+#closebtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  line-height: 30px;
+  text-align: center;
+  position: fixed;
+  font-size: 1.2em;
+  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fafafa;
+  background-color: #575b5f;
+}
+
+#closebtn:hover {
+  background-color: #a19c9c;
+  color: #575b5f;
+}
+
+#modalwindow {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -100;
+  opacity: 0;
+}
+
+#textwindow {
+  min-height: 200px;
+  min-width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  text-align: center;
+  padding: 3em;
+  background-image: url(./img/dynamic-style.png);
+}
+
+#restartbtn {
+  display: inline-block;
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background-color: #444;
+  color: #f9f9f9;
+  margin: 10px;
+  padding: .5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#restartbtn:hover {
+  background: rgb(85, 82, 82);
+}
